@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome to DonateNow</title>
+        <link rel="stylesheet" href="style4 copy 2.css">
+    </head>
+    <body>
+        <section>
+            <div class="bg"></div>
+            <header>
+                <a class="logo">DonateNow</a>
+                <div class="toggle"></div>
+                <ul class="navigation">
+                    <li><a href="index2.html" >Home</a></li>
+                    <li><a href="index4.html">Menu</a></li>
+                    <li><a href="index0.html" class="active">Contact</a></li>
+                </ul>
+            </header>
+            <div class="content">
+                <div class="textBox">
+                    <h2>Contact Us!</h2>
+                    <p><b>Contact Number : </b>+91 9876543210</p>
+                    <p><b>Email : </b>donatenow@email.com</p>
+                    <a href="https://forms.gle/pozJf37sLT6MFhxM7" target="_blank">Donate</a>
+                </div>
+                <div class="imgBox">
+                    <img src="donate.png" class="fruits">
+                </div>
+            </div>
+            <ul class="sci">
+                <li><a href="https://www.facebook.com/donatekart/" target="_blank"><img src="facebook.png"></a></li>
+                <li><a href="https://twitter.com/donatekart?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img src="twitter.png"></a></li>
+                <li><a href="https://www.instagram.com/donatekart/?hl=en" target="_blank"><img src="instagram.png"></a></li>
+            </ul>
+        </section>
+        
+        <script>
+            let menuToggle = document.querySelector('.toggle');
+            let navigation = document.querySelector('.navigation');
+            menuToggle.onclick = function(){
+                menuToggle.classList.toggle('active');
+                navigation.classList.toggle('active');
+            }
+        </script>
+    </body>
+</html>

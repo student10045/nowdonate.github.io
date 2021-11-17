@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome to DonateNow</title>
+        <link rel="stylesheet" href="style4.css">
+    </head>
+    <body>
+        <section>
+            <div class="bg"></div>
+            <header>
+                <a href="#" class="logo">DonateNow</a>
+                <div class="toggle"></div>
+                <ul class="navigation">
+                    <li><a href="index2.html">Home</a></li>
+                    <li><a href="index4.html" class="active">Menu</a></li>
+                    <li><a href="index0.html">Contact</a></li>
+                </ul>
+            </header>
+            <div class="content">
+                <div class="textBox">
+                    <h2>Make a difference!</h2>
+                    <p>Thank you for your great generosity! We, at DonateNow, greatly appreciate your donation, and your sacrifice. Your support helps to further our mission through various donation drives, including free meal events for needy. Your contribution is invaluable to us, thank you once again!</p>
+                    <a href="https://forms.gle/pozJf37sLT6MFhxM7 " target="_blank">Donate</a>
+                </div>
+                <div class="imgBox">
+                    <img src="apple.png" class="fruits">
+                </div>
+            </div>
+            <ul class="thumb">
+                <li data-text="Clothes" class="active"><img src="apple.png" onclick="imgSlider('apple.png');changeBgColor('#fc4a55')"></li>
+                <li data-text="Stationary"><img src="mango.png" onclick="imgSlider('mango.png');changeBgColor('#ffcc02')"></li>
+                <li data-text="Money"><img src="watermelon.png"  onclick="imgSlider('watermelon.png');changeBgColor('#ffb42b')"></li>
+                <li data-text="Furniture"><img src="dragonFruits.png"  onclick="imgSlider('dragonFruits.png');changeBgColor('#fb6cb2')"></li>
+                <li data-text="Food"><img src="pineApple.png"  onclick="imgSlider('pineApple.png');changeBgColor('#92ba3c')"></li>
+            </ul>
+            <ul class="sci">
+                <li><a href="https://www.facebook.com/donatekart/" target="_blank"><img src="facebook.png"></a></li>
+                <li><a href="https://twitter.com/donatekart?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img src="twitter.png"></a></li>
+                <li><a href="https://www.instagram.com/donatekart/?hl=en" target="_blank"><img src="instagram.png"></a></li>
+            </ul>
+        </section>
+        <script>
+            
+            let menuToggle = document.querySelector('.toggle');
+            let navigation = document.querySelector('.navigation');
+            menuToggle.onclick = function(){
+                menuToggle.classList.toggle('active');
+                navigation.classList.toggle('active');
+            }
+
+            // change image on click
+            function imgSlider(anything){
+                document.querySelector('.fruits').src = anything;
+            }
+
+            // change background color
+            function changeBgColor(color){
+                const bg = document.querySelector('.bg');
+                bg.style.background = color;
+            }
+
+            // add active class in selected thmbnails
+            let el = document.querySelectorAll(".thumb li");
+            for (let i = 0; i < el.length; i++){
+                el[i].onclick = function(){
+                    var c = 0;
+                    while (c < el.length){
+                        el[c++].className = 'check';
+                    }
+                    el[i].className = 'check active';
+                }
+            }
+        </script>
+    </body>
+</html>
